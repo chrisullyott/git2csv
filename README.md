@@ -16,7 +16,7 @@ $ pip3 install -r requirements.txt
 $ python3 git2csv.py <LOCAL_REPOSITORY_PATH>
 ```
 
-Files will be saved in a created `output` directory. Included in the data are the hash, author details, date, subject and body of the commit, like so:
+Files will be saved in a created `output` directory. Included in the data are the hash, author details, date, subject and body of the commit, like below. The body text is sanitized slightly in order to keep the CSV formatting intact.
 
 ```
 sha,author,date,subject,body
