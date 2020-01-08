@@ -12,7 +12,8 @@ entries = fetcher.get_entries()
 print('Found {} entries by "{}".'.format(len(entries), fetcher.get_user()))
 
 if len(entries) > 0:
-    rows = [fetcher.get_headers()] + entries
-    writer = git2csv.CsvWriter(fetcher.get_name(), rows)
+    name = fetcher.get_name()
+    data = [fetcher.get_headers()] + entries
+    writer = git2csv.CsvWriter(name, data)
     writer.write()
     print('File written: {}'.format(writer.get_filepath()))
