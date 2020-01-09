@@ -1,1 +1,2 @@
-from .data import LogFetcher, CsvWriter
+from .fetcher import LogFetcher
+from .writer import CsvWriter
